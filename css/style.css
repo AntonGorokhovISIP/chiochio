@@ -1,0 +1,789 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Header style start */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+header.sticky {
+    background: #fff;
+    padding: 20px 100px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+header .logo {
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.img_logo {
+  width: 80px;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+}
+
+header.sticky .logo {
+    color: #111;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    display: inline-block;
+    margin: 0 15px;
+    color: #000;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+header ul li a:hover {
+    color: #b4b4b4;
+}
+
+header.sticky ul li a {
+    color: #111;
+    transition: 0.2s;
+}
+
+header.sticky ul li a:hover {
+    color: #b4b4b4;
+}
+/* Header style end */
+
+
+
+/* Banner style start */
+section {
+    padding: 200px 100px;
+}
+
+section:first-child {
+    padding: 35px 100px ;
+}
+
+.banner {
+    padding: 30px 100px;
+    position: relative;
+    min-height: 100vh;
+    background-color: #F7F7F7;
+    background-size: cover;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.title-intro {
+    display:flex;
+}
+
+.textBx {
+    align-items: center;
+}
+
+.banner p {
+    color: #000;
+    font-size: 18px;
+}
+
+.banner h2 {
+    font-size: 60px;
+    color: #000;
+    font-weight: 500;
+    line-height: 0.9em;
+    font-family: 'Mak', sans-serif;
+    text-align: center;
+
+}
+
+.banner h2 span {
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 0.9em;
+    font-family: 'Mak', sans-serif;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.btn {
+    position: relative;
+    border: 1px solid #000;
+    display: inline-block;
+    color: #000;
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background: #C5C5C5;
+}
+
+.textBx-work {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.textBx-work-p {
+    padding-left: 20px;
+}
+
+/* Banner style end */
+
+/* About style start */
+.heading {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #111;
+}
+
+.heading h2 {
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentBx {
+    padding-left: 30px;
+}
+
+.contentBx h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contentBx_text-about {
+    line-height: 25px;
+}
+
+.contentBx_text-about {
+    margin: auto;
+    max-width: 580px;
+}
+
+.w50 {
+    min-width: 50%;
+}
+
+.content-two {
+    flex-direction: row-reverse;
+}
+
+.w50 img {
+    max-width: 50%;
+}
+
+img {
+    min-width: 100%;
+}
+/* About style end */
+
+/* Price style start */
+.price {
+    background: #F7F7F7;
+}
+
+.heading.white {
+    color: #fff;
+}
+
+.price .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.price .content .priceBx {
+    padding: 40px 20px;
+    background: #fff;
+    border: 2px solid #000;
+    color: #000;
+    max-width: 340px;
+    margin: 20px;
+    text-align: center;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.price .content .priceBx:hover {
+    background: #C5C5C5;
+}
+
+.price .content .priceBx {
+    width: 200px;
+    height: 350px;
+}
+
+.price .content .priceBx h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.priceBx_h2-p {
+    color: #fbaa00;
+}
+
+.content img {
+    width: 100px;
+}
+/* Price style end */
+
+/* Work style start */
+.work .content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.work .content .workBx
+{
+    width: 33%;
+    padding: 5px;
+}
+
+.work .content .workBx img {
+    max-width: 100%;
+}
+/* Work style start */
+
+/* Review style start */
+.review {
+    background: #f7f7f7;
+}
+
+.review .content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.review .content .reviewBx {
+    max-width: calc(50% - 40px);
+    min-width: calc(50% - 40px);
+    padding: 60px 40px;
+    margin: 20px;
+    background: #FFFFFF;
+    border: 1px solid #000;
+}
+
+.review .content .reviewBx p {
+    color: #000;
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.review .content .reviewBx h3 {
+    margin-top: 40px;
+    text-align: end;
+    color: #000;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1em;
+}
+
+.review .content .reviewBx h3 span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Review style end */
+
+/* Team style start */
+.profiles {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+    align-items: stretch;
+    flex-direction: row;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
+.profile {
+    flex-basis: 260px;
+    margin-bottom: 50px;
+    margin-left: 40px;
+    margin-right: 30px;
+}
+
+.profile .profile-img {
+    width: 270px;
+    opacity: 0.6;
+    transition: 400ms;
+}
+
+.profile:hover .profile-img {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.user-name {
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+.profile h5{
+    margin-top: 2px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fbaa00;
+}
+
+.profile p {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: left;
+}
+/* Team style end */
+
+/* Contact style start */
+.social {
+    min-width: 1%;
+    max-width: 50px;
+    transition: 200ms;
+    opacity: .6;
+}
+
+.social:hover {
+    opacity: 1;
+}
+
+.contact {
+    background: #111;
+    background-size: cover;
+}
+
+.contact .content {
+  align-items: flex-start;
+}
+
+.white  {
+    color: #fff;
+}
+
+.formBx {
+    min-width: 60%;
+}
+
+.formBx form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formBx form h3, .contactInfo h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.formBx form input, .formBx form textarea {
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: #222;
+    color: #fff;
+    resize: none;
+}
+
+.formBx form textarea {
+    min-height: 200px;
+}
+
+.formBx form input::placeholder, .formBx form textarea::placeholder
+{
+    color: #999;
+}
+
+.formBx form input[type="submit"] {
+    max-width: 200px;
+    background: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    color: #000;
+}
+
+.formBx form input[type="submit"]:hover {
+    background: #C5C5C5;
+}
+
+.contactInfo {
+    min-width: 40%;
+}
+
+.contactInfoBx {
+    position: relative;
+}
+
+.contactInfoBx .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.contactInfoBx .box .icon {
+    min-width: 40px;
+    padding-top: 4px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 24px;
+}
+
+.contactInfoBx .box .text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.contactInfoBx .box .text h3 {
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 0;
+}
+/* Contact style end */
+
+/* Footer style start */
+.copyright {
+    background: #000;
+    color: #333333;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px;
+}
+/* Footer style end */
+
+/* Media start */
+@media (max-width: 1150px)
+{
+    .banner h2 {
+        font-size: 1.9em;
+    }
+
+    .banner h2 span {
+        font-size: 2em;
+    }
+
+    .about .content {
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+    }
+    .about .content-two
+    .content-two {
+        display: flex;
+        align-items: stretch;
+
+    }
+    .team img {
+        min-width: 40%;
+    }
+    .profiles {
+        flex-direction: inherit;
+        margin: 20px;
+    }
+    .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .profile p {
+        text-align: center;
+        margin: 20px 60px 80px 60px;
+        font-size: 16px;
+    }
+    .contentBx h3  {
+        padding-top: 20px;
+    }
+    .contentBx {
+        padding-left: 0;
+        padding-top: 20px;
+    }
+    .content-two {
+        flex-direction: row;
+        margin-top: 40px;
+    }
+
+}
+
+@media (max-width: 991px)
+{
+    header, header.sticky {
+        padding: 20px 50px;
+        z-index: 1000;
+    }
+    .menu {
+        position: fixed;
+        top: 75px;
+        left: -100%;
+        display: block;
+        padding: 100px 50px;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        transition: 0.5s;
+        z-index: 999;
+        border-top: 1px solid rgba(0,0,0,0.2);
+    }
+    .menu.active {
+        left: 0;
+    }
+    header ul li a {
+        color: #111;
+        font-size: 24px;
+        margin: 10px;
+    }
+    .toggle {
+        width: 40px;
+        height: 40px;
+        background: url(../images/icon/menu.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+    }
+    section {
+        padding: 100px 50px;
+    }
+    .banner {
+        padding: 150px 50px 100px;
+    }
+    .banner h2 {
+        font-size: 1.9em;
+    }
+    .banner h2 span {
+        white-space: normal;
+        font-size: 2em;
+    }
+    .banner h3 {
+        font-size: 1em;
+    }
+    .btn {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    .textBx-work {
+        display: block;
+    }
+    .textBx-work  p {
+        font-size: 15px;
+    }
+    .textBx-work-p {
+        display: flex;
+        margin-top: 5px;
+        padding-left: 0;
+    }
+    .heading h2 {
+        font-size: 24px;
+    }
+    .contentBx h3 {
+        font-size: 20px;
+    }
+    .content {
+        flex-direction: column;
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+    .w50 {
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+    .content-two {
+        flex-direction: row;
+        margin-top: 25px;
+    }
+
+    .price .content .priceBx {
+        margin: 10px;
+    }
+    .work .content .workBx {
+        width: 100%;
+        padding: 10px;
+    }
+    .review .content .reviewBx {
+        max-width: calc(100% - 20px);
+        min-width: calc(100% - 20px);
+        padding: 40px 20px;
+        margin: 10px;
+        background: #fff;
+    }
+    .review .content .reviewBx h3 {
+        margin-top: 20px;
+    }
+    .team img {
+        min-width: 40%;
+    }
+    .team .heading {
+        text-align: center;
+    }
+    .team .heading span {
+        font-size: 15px;
+    }
+    .profile p {
+        margin: 5px 10px 80px 10px;
+        font-size: 16px;
+    }
+    .content-contact {
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+
+    }
+    .contactInfo {
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 600px)
+{
+    header, header.sticky {
+        padding: 20px 20px;
+    }
+    .banner {
+        padding: 150px 20px 100px;
+    }
+    section {
+        padding: 100px 20px;
+    }
+}
+/* Media end */
+
+
+/* скрываем чекбокс */
+#menu__toggle {
+  opacity: 0;
+}
+/* стилизуем кнопку */
+.menu__btn {
+  display: flex; /* используем flex для центрирования содержимого */
+  align-items: center;  /* центрируем содержимое кнопки */
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+/* добавляем "гамбургер" */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+/* контейнер меню */
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  text-align: center;
+  background-color: #ECEFF1;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}
+/* элементы меню */
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}

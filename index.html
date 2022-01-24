@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="description" content="Находимся в самом центре города">
+    <meta name="keywords" content="Парикмахерская, близко, центр, Якутск">
+    <title>Парикмахерская Чио Чио</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/font_mak/MAK-bold.css">
+</head>
+<body>
+
+    <!-- Header start -->
+    <header>
+        <a href="#" class="logo"><img src="images/logo.png" alt="logo" class="img_logo"></a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li><a href="#home" onclick="toggleMenu();">Главная</a></li>
+            <li><a href="#about" onclick="toggleMenu();">О нас</a></li>
+            <li><a href="#price" onclick="toggleMenu();">Цены</a></li>
+            <li><a href="#work" onclick="toggleMenu();">Наши работы</a></li>
+            <li><a href="#review" onclick="toggleMenu();">Отзывы</a></li>
+            <li><a href="#team" onclick="toggleMenu();">Команда</a></li>
+            <li><a href="#contact" onclick="toggleMenu();">Контакты</a></li>
+        </ul>
+    </header>
+    <!-- Header end -->
+
+    <!-- Banner start -->
+    <section class="banner" id="home">
+       <div></div>
+       <div>
+            <div class="textBx">
+                <h2><span>ЧИО ЧИО</span><br>Японская парикмахерская</h2>
+            </div>
+       </div>
+            <div class="textBx-work">
+                <a href="#about" class="btn">О нас</a>
+                <p class="textBx-work-p">Пн-Сб<br>09:00 - 20:00</p>
+                <p class="textBx-work-p">Ул. Петровского, 12. Якутск<br>+7 (800) 600-65-16</p>
+            </div>
+    </section>
+    <!-- Banner end -->
+
+    <!-- About start -->
+    <section class="about" id="about">
+        <div class="heading">
+            <h2>О нас</h2>
+        </div>
+        <div class="content">
+            <div class="w50">
+                <img src="images/about-images.jpg" class="img" alt="about1">
+            </div>
+            <div class="contentBx w50">
+                <div class="contentBx_text-about">
+                    <h3>Японская парикмахерская Чио Чио</h3>
+                    <p>Чио Чио берет свои корни из Японии. Формат таких парикмахерских подразумевает хорошие качество, обслуживание и обстановку.
+                    Японцы славятся тем, что во всех сферах жизни заморачиваются над “допиливанием” конвейера. Они требуют, чтобы все работало при минимальных потерях. Философия Кайдзен и система Тойота - всё это они разработали благодаря своему менталитету.</p>
+                </div>
+            </div>
+        </div>
+        <div class="content content-two">
+            <div class="w50">
+                <img src="images/about-images2.jpg" class="img" alt="about2">
+            </div>
+            <div class="contentBx w50">
+                <div class="contentBx_text-about">
+                    <p>В Чио Чио такой формат оптимизирован под отечественный рынок: мы переработали японский опыт под российские реалии и продолжаем внедрение принципов.
+                    Мы проводим опросы, получаем обратную связь от клиентов, изучаем каждый отзыв и оптимизируем систему так, чтобы продукт был интересен каждому.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About end -->
+
+    <!-- Цены start -->
+    <section class="price" id="price">
+        <div class="heading">
+            <h2>Цены</h2>
+            <p>Наши услуги</p>
+        </div>
+        <div class="content">
+            <div class="priceBx">
+                <img src="images/icon/woman.png" alt="woman_icon">
+                <h2>Женская стрижка</h2>
+                <p class="priceBx_h2-p">От 250₽</p>
+
+            </div>
+            <div class="priceBx">
+                <img src="images/icon/man.png" alt="man_icon">
+                <h2>Мужская стрижка</h2>
+                <p class="priceBx_h2-p">От 250₽</p>
+            </div>
+            <div class="priceBx">
+                <img src="images/icon/brovi.png" alt="brovi_icon">
+                <h2>Коррекция бровей</h2>
+                <p class="priceBx_h2-p">От 300₽</p>
+            </div>
+            <div class="priceBx">
+                <img src="images/icon/ukladka.png" alt="ukladka_icon">
+                <h2>Укладка</h2>
+                <p class="priceBx_h2-p"><br>От 400₽</p>
+            </div>
+            <div class="priceBx">
+                <img src="images/icon/pokraska.png" alt="pokraska_icon">
+                <h2>Окрашивание</h2>
+                <p class="priceBx_h2-p"><br>От 800₽</p>
+            </div>
+            <div class="priceBx">
+                <img src="images/icon/lechenie.png" alt="lechenie_icon">
+                <h2>Лечение</h2>
+                <p class="priceBx_h2-p"><br>От 200₽</p>
+            </div>
+        </div>
+    </section>
+    <!-- Цены end -->
+
+    <!-- Work start -->
+    <section class="work" id="work">
+        <div class="heading">
+            <h2>Наши Работы</h2>
+        </div>
+        <div class="content">
+            <div class="workBx">
+                <img src="images/work-1.jpg" alt="work-1">
+            </div>
+            <div class="workBx">
+                <img src="images/work-2.jpg" alt="work-2">
+            </div>
+            <div class="workBx">
+                <img src="images/work-3.jpg" alt="work-3">
+            </div>
+            <div class="workBx">
+                <img src="images/work-4.jpg" alt="work-4">
+            </div>
+            <div class="workBx">
+                <img src="images/work-5.jpg" alt="work-5">
+            </div>
+            <div class="workBx">
+                <img src="images/work-6.jpg" alt="work-6">
+            </div>
+            <div class="heading">
+                <a href="gallery.html" class="btn">Ещё работы</a>
+            </div>
+        </div>
+    </section>
+    <!-- Work end -->
+
+    <!-- Review start -->
+    <section class="review" id="review">
+        <div class="heading">
+            <h2>Отзывы</h2>
+            <p>Только честные и живые</p>
+        </div>
+        <div class="content">
+            <div class="reviewBx">
+                <p>Хорошая парикмахерская.</p>
+                <h3>Анатолий Ыкчанов<br><span>17.10.2021</span></h3>
+            </div>
+            <div class="reviewBx">
+                <p>Хорошее обслуживание.</p>
+                <h3>Денис Федоров<br><span>23.09.2021</span></h3>
+            </div>
+            <div class="reviewBx">
+                <p>Все быстро и четко, постоянно хожу сюда, рекомендую.</p>
+                <h3>Оиналт Николаев<br><span>02.09.2021</span></h3>
+            </div>
+            <div class="reviewBx">
+                <p>Отличная стрижка, парикмахер Виктор очень классно подстриг! рекомендую.</p>
+                <h3>Виктор Матвеев<br><span>26.08.2021</span></h3>
+            </div>
+            <div class="reviewBx">
+                <p>С удовольствием стригусь у молодого человека, качество стрижки оцениваю на твердую пятерку.</p>
+                <h3>Айви Лоу<br><span>15.07.2021</span></h3>
+            </div>
+            <div class="reviewBx">
+                <p>Отличная парикмахерская молодой человек стригет очень хорошо и цены хорошие, рекомендую.</p>
+                <h3>Яков Дмитриев<br><span>29.06.2021</span></h3>
+            </div>
+        </div>
+    </section>
+    <!-- Review end -->
+
+    <!-- Team start -->
+    <section class="team" id="team">
+        <div class="heading">
+            <h2>Команда</h2>
+            <p>Наши мастера</p>
+        </div>
+        <div class="profiles">
+            <div class="profile">
+                <img src="images/team-1.jpg" class="profile-img" alt="team-1">
+                <h3 class="user-name">Ира</h3>
+                <h5>Администратор</h5>
+                <p>Люблю стричь и красить волосы</p>
+            </div>
+            <div class="profile">
+                <img src="images/team-2.jpg" class="profile-img" alt="team-2">
+
+                <h3 class="user-name">Виктор</h3>
+                <h5>Парикмахер</h5>
+                <p>Справлюсь с любой сложностью</p>
+            </div>
+            <div class="profile">
+                <img src="images/team-3.jpg" class="profile-img" alt="team-3">
+                <h3 class="user-name">Давид</h3>
+                <h5>Парикмахер</h5>
+                <p>Доверьтесь моему мастерству</p>
+            </div>
+            <div class="profile">
+                <img src="images/team-4.jpg" class="profile-img" alt="team-4">
+                <h3 class="user-name">Анна</h3>
+                <h5>Парикмахер</h5>
+                <p>Никогда не устаю творить</p>
+            </div>
+            <div class="profile">
+                <img src="images/team-5.jpg" class="profile-img" alt="team-5">
+                <h3 class="user-name">София</h3>
+                <h5>Парикмахер</h5>
+                <p>Делаю красоту красивой</p>
+            </div>
+        </div>
+    </section>
+    <!-- Team end -->
+
+    <!-- Contact start -->
+    <section class="contact" id="contact">
+        <div class="heading white">
+            <h2>Контакты</h2>
+            <p>Свяжитесь с нами</p>
+            <a href="https://www.instagram.com/chiochioyakutsk/" class="social">
+                <img src="images/icon/instagram.png" alt="instagram" class="social">
+            </a>
+        </div>
+        <div class="content">
+            <div class="contactInfo content-contact">
+                <div class="contactInfoBx">
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Aдрес</h3>
+                            <p>Ул. Петровского, 12<br>Якутск, Республика Саха(Якутия)<br>1 этаж</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Номер</h3>
+                            <p>+7 (800) 600-65-16</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-envelope-o"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Почта</h3>
+                            <p>chiochio@gmail.com</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="formBx">
+                <form>
+                    <h3>Напиши нам</h3>
+                    <input type="text" name="" placeholder="Имя">
+                    <input type="email" name="" placeholder="Email">
+                    <textarea placeholder="Ваше сообщение"></textarea>
+                    <input type="submit" value="Отправить">
+                </form>
+
+            </div>
+        </div>
+    </section>
+    <!-- Contact end -->
+
+    <!-- Footer start -->
+    <footer>
+        <div class="copyright">
+            <p>© 2021 Tony Gorokhov - Все права защищены.</p>
+
+        </div>
+    </footer>
+    <!-- Footer end -->
+
+
+
+    <!-- Scripts start -->
+    <script type="text/javascript">
+        window.addEventListener('scroll', function(){
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var menuToggle = document.querySelector('.menu');
+            menuToggle.classList.toggle('active');
+            menu.classList.toggle('active');
+        }
+    </script>
+    <!-- Scripts end -->
+</body>
+</html>
