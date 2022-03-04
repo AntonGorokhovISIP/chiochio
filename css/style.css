@@ -564,7 +564,7 @@ img {
 @media (max-width: 991px)
 {
     header, header.sticky {
-        padding: 10px 50px;
+        padding: 20px 50px;
         z-index: 1000;
     }
     .menu {
@@ -588,9 +588,6 @@ img {
         color: #111;
         font-size: 24px;
         margin: 10px;
-    }
-    .img_logo {
-        width: 60px;
     }
     .toggle {
         width: 40px;
@@ -698,7 +695,7 @@ img {
 @media (max-width: 600px)
 {
     header, header.sticky {
-        padding: 10px 20px;
+        padding: 20px 20px;
     }
     .banner {
         padding: 150px 20px 100px;
