@@ -277,10 +277,10 @@
             </div>
 
             <div class="formBx">
-                <form action="#" id="form">
+                <form action="mail.php" id="form" method="POST">
                     <h3>Напиши нам</h3>
-                    <input class="_req" id="formName" type="text" name="name" placeholder="Имя">
-                    <input class="_req _email" id="formEmail" type="text" name="" placeholder="Email">
+                    <input class="_req" id="formName" type="text" name="user_name" placeholder="Имя">
+                    <input class="_req _email" id="formEmail" type="text" name="user_email" placeholder="Email">
                     <textarea class="" id="formMessage" name="message" placeholder="Ваше сообщение"></textarea>
                     <input type="submit" value="Отправить">
                 </form>
@@ -329,7 +329,7 @@
                 if (error === 0) {
                     form.classList.add('_sending');
 
-                    let response = await fetch('sendmail.php', {
+                    let response = await fetch('mail.php', {
                         method: 'POST',
                         body: formData
                     });
