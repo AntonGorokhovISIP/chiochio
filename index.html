@@ -277,10 +277,10 @@
             </div>
 
             <div class="formBx">
-                <form action="mail.php" id="form" method="POST">
+                <form action="#" id="form">
                     <h3>Напиши нам</h3>
-                    <input class="" id="formName" type="text" name="user_name" placeholder="Имя">
-                    <input class="" id="formEmail" type="text" name="user_email" placeholder="Email">
+                    <input class="_req" id="formName" type="text" name="name" placeholder="Имя">
+                    <input class="_req _email" id="formEmail" type="text" name="" placeholder="Email">
                     <textarea class="" id="formMessage" name="message" placeholder="Ваше сообщение"></textarea>
                     <input type="submit" value="Отправить">
                 </form>
@@ -302,10 +302,6 @@
 
 
     <!-- Scripts start -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
     <script type="text/javascript">
         window.addEventListener('scroll', function () {
             var header = document.querySelector('header');
@@ -319,7 +315,73 @@
             menu.classList.toggle('active');
         }
 
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('form');
+            form.addEventListener('submit', formSend);
 
+            async function formSend(e) {
+                e.preventDefault();
+
+                let error = formValidate(form);
+
+                let formData = new FormData(form);
+
+                if (error === 0) {
+                    form.classList.add('_sending');
+
+                    let response = await fetch('sendmail.php', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    if (response.ok) {
+                        let result = await response.json();
+                        alert(result.message);
+                        formPreview.innerHTML = '';
+                        form.reset();
+                        form.classList.remove('_sending');
+                    } else {
+                        alert("Ошибка, возможно проблемы с сервером");
+                        form.classList.remove('_sending');
+                    }
+                } else {
+                    alert('Заполните обязательные поля или заполните поля верно');
+                }
+            }
+
+            function formValidate(form) {
+                let error = 0;
+                let formReq = document.querySelectorAll('._req');
+
+                for (let index = 0; index < formReq.length; index++) {
+                    const input = formReq[index];
+                    formRemoveError(input);
+
+                    if (input.classList.contains('_email')) {
+                        if (emailTest(input)) {
+                            formAddError(input);
+                            error++;
+                        }
+                    } else {
+                        if (input.value === '') {
+                            formAddError(input);
+                            error++;
+                        }
+                    }
+                }
+                return error;
+            }
+            function formAddError(input) {
+                input.parentElement.classList.add('_error');
+                input.classList.add('_error');
+            }
+            function formRemoveError(input) {
+                input.parentElement.classList.remove('_error');
+                input.classList.remove('_error');
+            }
+            function emailTest(input) {
+                return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+            }
+        });
     </script>
     <!-- Scripts end -->
 </body>
