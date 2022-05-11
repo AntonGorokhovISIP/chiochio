@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -25,7 +26,7 @@ header {
 header.sticky {
     background: #fff;
     padding: 20px 100px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 header .logo {
@@ -37,7 +38,7 @@ header .logo {
 }
 
 .img_logo {
-  width: 80px;
+    width: 80px;
 }
 
 header ul {
@@ -75,6 +76,7 @@ header.sticky ul li a {
 header.sticky ul li a:hover {
     color: #b4b4b4;
 }
+
 /* Header style end */
 
 
@@ -85,7 +87,7 @@ section {
 }
 
 section:first-child {
-    padding: 35px 100px ;
+    padding: 35px 100px;
 }
 
 .banner {
@@ -102,7 +104,7 @@ section:first-child {
 }
 
 .title-intro {
-    display:flex;
+    display: flex;
 }
 
 .textBx {
@@ -216,6 +218,7 @@ section:first-child {
 img {
     min-width: 100%;
 }
+
 /* About style end */
 
 /* Price style start */
@@ -271,6 +274,7 @@ img {
 .content img {
     width: 100px;
 }
+
 /* Price style end */
 
 /* Work style start */
@@ -280,8 +284,7 @@ img {
     flex-wrap: wrap;
 }
 
-.work .content .workBx
-{
+.work .content .workBx {
     width: 33%;
     padding: 5px;
 }
@@ -289,6 +292,7 @@ img {
 .work .content .workBx img {
     max-width: 100%;
 }
+
 /* Work style start */
 
 /* Review style start */
@@ -359,8 +363,8 @@ img {
 }
 
 .profile:hover .profile-img {
-  opacity: 1;
-  background: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .user-name {
@@ -368,7 +372,7 @@ img {
     font-size: 22px;
 }
 
-.profile h5{
+.profile h5 {
     margin-top: 2px;
     font-size: 16px;
     font-weight: 600;
@@ -380,6 +384,7 @@ img {
     margin-top: 10px;
     text-align: left;
 }
+
 /* Team style end */
 
 /* Contact style start */
@@ -400,15 +405,16 @@ img {
 }
 
 .contact .content {
-  align-items: flex-start;
+    align-items: flex-start;
 }
 
-.white  {
+.white {
     color: #fff;
 }
 
 .formBx {
     min-width: 60%;
+    position: relative;
 }
 
 .formBx form {
@@ -416,14 +422,34 @@ img {
     flex-direction: column;
 }
 
-.formBx form h3, .contactInfo h3 {
+.formBx::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(51, 51, 51, 0.9) url("../images/loading.gif") center / 50px no-repeat;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease 0s;
+}
+
+.formBx._sending::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.formBx form h3,
+.contactInfo h3 {
     color: #fff;
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 10px;
 }
 
-.formBx form input, .formBx form textarea {
+.formBx form input,
+.formBx form textarea {
     margin-bottom: 20px;
     padding: 15px;
     font-size: 16px;
@@ -434,12 +460,20 @@ img {
     resize: none;
 }
 
+.formBx form input:focus {
+    box-shadow: 0 0 15px #7a956b;
+}
+
+.formBx form input._error {
+    box-shadow: 0 0 15px red;
+}
+
 .formBx form textarea {
     min-height: 200px;
 }
 
-.formBx form input::placeholder, .formBx form textarea::placeholder
-{
+.formBx form input::placeholder,
+.formBx form textarea::placeholder {
     color: #999;
 }
 
@@ -495,6 +529,7 @@ img {
     color: #fff;
     margin-bottom: 0;
 }
+
 /* Contact style end */
 
 /* Footer style start */
@@ -505,11 +540,11 @@ img {
     text-align: center;
     padding: 10px;
 }
+
 /* Footer style end */
 
 /* Media start */
-@media (max-width: 1150px)
-{
+@media (max-width: 1150px) {
     .banner h2 {
         font-size: 1.9em;
     }
@@ -523,37 +558,44 @@ img {
         align-items: stretch;
         flex-direction: column;
     }
-    .about .content-two
-    .content-two {
+
+    .about .content-two .content-two {
         display: flex;
         align-items: stretch;
 
     }
+
     .team img {
         min-width: 40%;
     }
+
     .profiles {
         flex-direction: inherit;
         margin: 20px;
     }
+
     .profile {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-bottom: 20px;
     }
+
     .profile p {
         text-align: center;
         margin: 20px 60px 80px 60px;
         font-size: 16px;
     }
-    .contentBx h3  {
+
+    .contentBx h3 {
         padding-top: 20px;
     }
+
     .contentBx {
         padding-left: 0;
         padding-top: 20px;
     }
+
     .content-two {
         flex-direction: row;
         margin-top: 40px;
@@ -561,12 +603,14 @@ img {
 
 }
 
-@media (max-width: 991px)
-{
-    header, header.sticky {
+@media (max-width: 991px) {
+
+    header,
+    header.sticky {
         padding: 10px 50px;
         z-index: 1000;
     }
+
     .menu {
         position: fixed;
         top: 75px;
@@ -579,19 +623,23 @@ img {
         background: #fff;
         transition: 0.5s;
         z-index: 999;
-        border-top: 1px solid rgba(0,0,0,0.2);
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
     }
+
     .menu.active {
         left: 0;
     }
+
     header ul li a {
         color: #111;
         font-size: 24px;
         margin: 10px;
     }
+
     .img_logo {
         width: 60px;
     }
+
     .toggle {
         width: 40px;
         height: 40px;
@@ -601,54 +649,68 @@ img {
         background-size: 30px;
         cursor: pointer;
     }
+
     section {
         padding: 100px 50px;
     }
+
     .banner {
         padding: 150px 50px 100px;
     }
+
     .banner h2 {
         font-size: 1.9em;
     }
+
     .banner h2 span {
         white-space: normal;
         font-size: 2em;
     }
+
     .banner h3 {
         font-size: 1em;
     }
+
     .btn {
         margin-top: 10px;
         padding: 10px 20px;
         font-size: 16px;
     }
+
     .textBx-work {
         display: block;
     }
-    .textBx-work  p {
+
+    .textBx-work p {
         font-size: 15px;
     }
+
     .textBx-work-p {
         display: flex;
         margin-top: 5px;
         padding-left: 0;
     }
+
     .heading h2 {
         font-size: 24px;
     }
+
     .contentBx h3 {
         font-size: 20px;
     }
+
     .content {
         flex-direction: column;
         display: block;
         align-items: center;
         justify-content: center;
     }
+
     .w50 {
         padding-left: 0;
         margin-bottom: 20px;
     }
+
     .content-two {
         flex-direction: row;
         margin-top: 25px;
@@ -657,10 +719,12 @@ img {
     .price .content .priceBx {
         margin: 10px;
     }
+
     .work .content .workBx {
         width: 100%;
         padding: 10px;
     }
+
     .review .content .reviewBx {
         max-width: calc(100% - 20px);
         min-width: calc(100% - 20px);
@@ -668,125 +732,147 @@ img {
         margin: 10px;
         background: #fff;
     }
+
     .review .content .reviewBx h3 {
         margin-top: 20px;
     }
+
     .team img {
         min-width: 40%;
     }
+
     .team .heading {
         text-align: center;
     }
+
     .team .heading span {
         font-size: 15px;
     }
+
     .profile p {
         margin: 5px 10px 80px 10px;
         font-size: 16px;
     }
+
     .content-contact {
         display: flex;
         flex-direction: column;
-        align-items:flex-start;
+        align-items: flex-start;
 
     }
+
     .contactInfo {
         margin: 20px 0;
     }
 }
 
-@media (max-width: 600px)
-{
-    header, header.sticky {
+@media (max-width: 600px) {
+
+    header,
+    header.sticky {
         padding: 10px 20px;
     }
+
     .banner {
         padding: 150px 20px 100px;
     }
+
     section {
         padding: 100px 20px;
     }
 }
+
 /* Media end */
 
 
 /* скрываем чекбокс */
 #menu__toggle {
-  opacity: 0;
+    opacity: 0;
 }
+
 /* стилизуем кнопку */
 .menu__btn {
-  display: flex; /* используем flex для центрирования содержимого */
-  align-items: center;  /* центрируем содержимое кнопки */
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  width: 26px;
-  height: 26px;
-  cursor: pointer;
-  z-index: 1;
+    display: flex;
+    /* используем flex для центрирования содержимого */
+    align-items: center;
+    /* центрируем содержимое кнопки */
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
 }
+
 /* добавляем "гамбургер" */
-.menu__btn > span,
-.menu__btn > span::before,
-.menu__btn > span::after {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: #616161;
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
 }
-.menu__btn > span::before {
-  content: '';
-  top: -8px;
+
+.menu__btn>span::before {
+    content: '';
+    top: -8px;
 }
-.menu__btn > span::after {
-  content: '';
-  top: 8px;
+
+.menu__btn>span::after {
+    content: '';
+    top: 8px;
 }
 
 /* контейнер меню */
 .menu__box {
-  display: block;
-  position: fixed;
-  visibility: hidden;
-  top: 0;
-  left: -100%;
-  width: 300px;
-  height: 100%;
-  margin: 0;
-  padding: 80px 0;
-  list-style: none;
-  text-align: center;
-  background-color: #ECEFF1;
-  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
-}
-/* элементы меню */
-.menu__item {
-  display: block;
-  padding: 12px 24px;
-  color: #333;
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  text-decoration: none;
-}
-.menu__item:hover {
-  background-color: #CFD8DC;
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background-color: #ECEFF1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
 }
 
-#menu__toggle:checked ~ .menu__btn > span {
-  transform: rotate(45deg);
+/* элементы меню */
+.menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
 }
-#menu__toggle:checked ~ .menu__btn > span::before {
-  top: 0;
-  transform: rotate(0);
+
+.menu__item:hover {
+    background-color: #CFD8DC;
 }
-#menu__toggle:checked ~ .menu__btn > span::after {
-  top: 0;
-  transform: rotate(90deg);
+
+#menu__toggle:checked~.menu__btn>span {
+    transform: rotate(45deg);
 }
-#menu__toggle:checked ~ .menu__box {
-  visibility: visible;
-  left: 0;
+
+#menu__toggle:checked~.menu__btn>span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+#menu__toggle:checked~.menu__btn>span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#menu__toggle:checked~.menu__box {
+    visibility: visible;
+    left: 0;
 }

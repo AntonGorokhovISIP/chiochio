@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <meta name="description" content="Находимся в самом центре города">
     <meta name="keywords" content="Парикмахерская, близко, центр, Якутск">
     <title>Парикмахерская Чио Чио</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="fonts/font_mak/MAK-bold.css">
 </head>
+
 <body>
 
     <!-- Header start -->
@@ -30,17 +33,17 @@
 
     <!-- Banner start -->
     <section class="banner" id="home">
-       <div></div>
-       <div>
+        <div></div>
+        <div>
             <div class="textBx">
                 <h2><span>ЧИО ЧИО</span><br>Японская парикмахерская</h2>
             </div>
-       </div>
-            <div class="textBx-work">
-                <a href="#about" class="btn">О нас</a>
-                <p class="textBx-work-p">Пн-Сб<br>09:00 - 20:00</p>
-                <p class="textBx-work-p">Ул. Петровского, 12. Якутск<br>+7 (800) 600-65-16</p>
-            </div>
+        </div>
+        <div class="textBx-work">
+            <a href="#about" class="btn">О нас</a>
+            <p class="textBx-work-p">Пн-Сб<br>09:00 - 20:00</p>
+            <p class="textBx-work-p">Ул. Петровского, 12. Якутск<br>+7 (800) 600-65-16</p>
+        </div>
     </section>
     <!-- Banner end -->
 
@@ -56,8 +59,11 @@
             <div class="contentBx w50">
                 <div class="contentBx_text-about">
                     <h3>Японская парикмахерская Чио Чио</h3>
-                    <p>Чио Чио берет свои корни из Японии. Формат таких парикмахерских подразумевает хорошие качество, обслуживание и обстановку.
-                    Японцы славятся тем, что во всех сферах жизни заморачиваются над “допиливанием” конвейера. Они требуют, чтобы все работало при минимальных потерях. Философия Кайдзен и система Тойота - всё это они разработали благодаря своему менталитету.</p>
+                    <p>Чио Чио берет свои корни из Японии. Формат таких парикмахерских подразумевает хорошие качество,
+                        обслуживание и обстановку.
+                        Японцы славятся тем, что во всех сферах жизни заморачиваются над “допиливанием” конвейера. Они
+                        требуют, чтобы все работало при минимальных потерях. Философия Кайдзен и система Тойота - всё
+                        это они разработали благодаря своему менталитету.</p>
                 </div>
             </div>
         </div>
@@ -67,8 +73,10 @@
             </div>
             <div class="contentBx w50">
                 <div class="contentBx_text-about">
-                    <p>В Чио Чио такой формат оптимизирован под отечественный рынок: мы переработали японский опыт под российские реалии и продолжаем внедрение принципов.
-                    Мы проводим опросы, получаем обратную связь от клиентов, изучаем каждый отзыв и оптимизируем систему так, чтобы продукт был интересен каждому.</p>
+                    <p>В Чио Чио такой формат оптимизирован под отечественный рынок: мы переработали японский опыт под
+                        российские реалии и продолжаем внедрение принципов.
+                        Мы проводим опросы, получаем обратную связь от клиентов, изучаем каждый отзыв и оптимизируем
+                        систему так, чтобы продукт был интересен каждому.</p>
                 </div>
             </div>
         </div>
@@ -269,11 +277,11 @@
             </div>
 
             <div class="formBx">
-                <form>
+                <form action="#" id="form">
                     <h3>Напиши нам</h3>
-                    <input type="text" name="" placeholder="Имя">
-                    <input type="email" name="" placeholder="Email">
-                    <textarea placeholder="Ваше сообщение"></textarea>
+                    <input class="_req" id="formName" type="text" name="name" placeholder="Имя">
+                    <input class="_req _email" id="formEmail" type="text" name="" placeholder="Email">
+                    <textarea class="" id="formMessage" name="message" placeholder="Ваше сообщение"></textarea>
                     <input type="submit" value="Отправить">
                 </form>
 
@@ -295,18 +303,87 @@
 
     <!-- Scripts start -->
     <script type="text/javascript">
-        window.addEventListener('scroll', function(){
+        window.addEventListener('scroll', function () {
             var header = document.querySelector('header');
             header.classList.toggle('sticky', window.scrollY > 0);
         });
 
-        function toggleMenu(){
+        function toggleMenu() {
             var menuToggle = document.querySelector('.toggle');
             var menuToggle = document.querySelector('.menu');
             menuToggle.classList.toggle('active');
             menu.classList.toggle('active');
         }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('form');
+            form.addEventListener('submit', formSend);
+
+            async function formSend(e) {
+                e.preventDefault();
+
+                let error = formValidate(form);
+
+                let formData = new FormData(form);
+
+                if (error === 0) {
+                    form.classList.add('_sending');
+
+                    let response = await fetch('sendmail.php', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    if (response.ok) {
+                        let result = await response.json();
+                        alert(result.message);
+                        formPreview.innerHTML = '';
+                        form.reset();
+                        form.classList.remove('_sending');
+                    } else {
+                        alert("Ошибка");
+                        form.classList.remove('_sending');
+                    }
+                } else {
+                    alert('Заполните обязательные поля');
+                }
+            }
+
+            function formValidate(form) {
+                let error = 0;
+                let formReq = document.querySelectorAll('._req');
+
+                for (let index = 0; index < formReq.length; index++) {
+                    const input = formReq[index];
+                    formRemoveError(input);
+
+                    if (input.classList.contains('_email')) {
+                        if (emailTest(input)) {
+                            formAddError(input);
+                            error++;
+                        }
+                    } else {
+                        if (input.value === '') {
+                            formAddError(input);
+                            error++;
+                        }
+                    }
+                }
+                return error;
+            }
+            function formAddError(input) {
+                input.parentElement.classList.add('_error');
+                input.classList.add('_error');
+            }
+            function formRemoveError(input) {
+                input.parentElement.classList.remove('_error');
+                input.classList.remove('_error');
+            }
+            function emailTest(input) {
+                return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+            }
+        });
     </script>
     <!-- Scripts end -->
 </body>
+
 </html>
