@@ -10,9 +10,9 @@
 	$mail->setLanguage('ru', 'phpmailer/language/'); 
 	$mail->IsHTML(true);
 
-	$mail->setFrom('info@fls.guru', 'Клиент');
+	$mail->setFrom('tony_harbour@mail.ru', 'Парикмахерская Чио Чио');
 	$mail->addAddress('tony_harbour@mail.ru');
-	$mail->Subject = 'Привет! Это "Фрилансер по жизни"";
+	$mail->Subject = 'Привет! Это "Парикмахерская Чио Чио"';
 
 	
 	$body = '<h1>Встречайте супер письмо!</h1>';
