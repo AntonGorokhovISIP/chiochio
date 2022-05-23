@@ -1,79 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">
-  <meta name="description" content="Находимся в самом центре города">
-  <meta name="keywords" content="Парикмахерская, близко, центр, Якутск">
-  <title>Парикмахерская Beauty Hair</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="fonts/font_mak/MAK-bold.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="description" content="Находимся в самом центре города">
+    <meta name="keywords" content="Парикмахерская, близко, центр, Якутск">
+    <title>Парикмахерская Beauty Hair</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/font_mak/MAK-bold.css">
 </head>
-
 <body>
-
-  <!-- Work start -->
-  <section class="work" id="work">
-    <div class="heading">
-      <h2>Наши Работы</h2>
-      <a href="index.html" class="btn">Назад</a>
-
-    </div>
-    <div class="content">
-      <div class="workBx">
-        <img src="images/work-1.jpg" alt="work-1">
-      </div>
-      <div class="workBx">
-        <img src="images/work-2.jpg" alt="work-2">
-      </div>
-      <div class="workBx">
-        <img src="images/work-3.jpg" alt="work-3">
-      </div>
-      <div class="workBx">
-        <img src="images/work-4.jpg" alt="work-4">
-      </div>
-      <div class="workBx">
-        <img src="images/work-5.jpg" alt="work-5">
-      </div>
-      <div class="workBx">
-        <img src="images/work-6.jpg" alt="work-6">
-      </div>
-
-    </div>
-  </section>
-  <!-- Work end -->
+    <!-- Header start -->
+    <header>
+        <a href="index.html" class="logo"><img src="images/logo.png" alt="logo" class="img_logo"></a>
 
 
-  <!-- Footer start -->
-  <footer>
-    <div class="copyright">
-      <p>© 2021 Чио Чио - Все права защищены.</p>
+    </header>
+    <!-- Header end -->
+    <!-- Work start -->
+    <section class="work" id="work">
+        <div class="heading">
+            <h2>Наши Работы</h2>
+            <a href="index.html" class="btn">Назад</a>
 
-    </div>
-  </footer>
-  <!-- Footer end -->
+        </div>
+        <div class="content">
+            <div class="workBx">
+                <img src="images/work-1.jpg" alt="work-1">
+            </div>
+            <div class="workBx">
+                <img src="images/work-2.jpg" alt="work-2">
+            </div>
+            <div class="workBx">
+                <img src="images/work-3.jpg" alt="work-3">
+            </div>
+            <div class="workBx">
+                <img src="images/work-4.jpg" alt="work-4">
+            </div>
+            <div class="workBx">
+                <img src="images/work-5.jpg" alt="work-5">
+            </div>
+            <div class="workBx">
+                <img src="images/work-6.jpg" alt="work-6">
+            </div>
+
+        </div>
+    </section>
+    <!-- Work end -->
+
+
+    <!-- Footer start -->
+    <footer>
+        <div class="copyright">
+            <p>© 2021 Чио Чио - Все права защищены.</p>
+
+        </div>
+    </footer>
+    <!-- Footer end -->
 
 
 
 
-  <script type="text/javascript">
-    window.addEventListener('scroll', function() {
-      var header = document.querySelector('header');
-      header.classList.toggle('sticky', window.scrollY > 0);
-    });
+    <script type="text/javascript">
+        window.addEventListener('scroll', function(){
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
 
-    function toggleMenu() {
-      var menuToggle = document.querySelector('.toggle');
-      var menuToggle = document.querySelector('.menu');
-      menuToggle.classList.toggle('active');
-      menu.classList.toggle('active');
-    }
-  </script>
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var menuToggle = document.querySelector('.menu');
+            menuToggle.classList.toggle('active');
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
-
 </html>
